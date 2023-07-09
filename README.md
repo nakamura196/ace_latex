@@ -1,7 +1,17 @@
-# Ace.jsでTeXをハイライトする
+# Editor Demo
 
-Ace.jsでTeXをハイライトするサンプルリポジトリです。
+## Ace.jsでTeXをハイライトする
 
-## デモ
+Ace.jsでTeXをハイライトする
 
-https://nakamura196.github.io/ace_latex/
+### デモ
+
+https://nakamura196.github.io/ace_latex/ace/
+
+## Monaco EditorでTeXをハイライトする
+
+Monaco EditorでTeXをハイライトする
+
+### デモ
+
+https://nakamura196.github.io/ace_latex/monaco/
