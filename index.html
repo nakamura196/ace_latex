@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+      #editor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editor" style="height: 100vh"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.2/ace.js"
+      integrity="sha512-oVyp48/610D5Jo577cvp2vX+Fc0kYaI6s2tZRqBRzjZh7+y/vOEHTzUefbXk/B8P0B76bOK3tL1zeF/QcXlyiA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const text = `\\usepackage{hiragino,ryumin,cid}
+\\usepackage[dvips]{graphics}
+\\usepackage{multicol}
+
+\\begin{document}
+
+テキスト
+
+\\右注{（サンプル）}テキスト
+
+\\end{document}`;
+
+      const editor = ace.edit("editor");
+      // editor.setTheme("ace/theme/monokai");
+      editor.setFontSize(14);
+      editor.getSession().setMode("ace/mode/latex");
+      editor.getSession().setUseWrapMode(true);
+      editor.getSession().setTabSize(4);
+      editor.$blockScrolling = Infinity;
+      editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+      });
+      editor.setValue(text, 1);
+    </script>
+  </body>
+</html>
